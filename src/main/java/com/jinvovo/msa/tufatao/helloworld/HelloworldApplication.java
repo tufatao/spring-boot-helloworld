@@ -11,7 +11,7 @@ public class HelloworldApplication {
 
     @RequestMapping("/")
     public String home() {
-        return "Hello， this is the first web app 1.0.1";
+        return "Hello， this is the first web app 1.0.2";
     }
     public static void main(String[] args) {
         SpringApplication.run(HelloworldApplication.class, args);
