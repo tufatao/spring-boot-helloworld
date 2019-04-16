@@ -17,7 +17,7 @@
     <properties>
         <java.version>1.8</java.version>
         <dockerfile.maven.version>1.4.10</dockerfile.maven.version>
-        <docker.registry.name.prefix>reg.devharbor.com</docker.registry.name.prefix>
+        <docker.registry.name.prefix>reg.devharbor.com/test</docker.registry.name.prefix>
     </properties>
 
     <dependencies>
@@ -55,15 +55,15 @@
                         <id>default</id>
                         <goals>
                             <goal>build</goal>
-                            <goal>push</goal>
+                            <!--<goal>push</goal>-->
                         </goals>
                     </execution>
                 </executions>
                 <configuration>
-                    <repository>${docker.registry.name.prefix}/test/${project.artifactId}</repository>
+                    <repository>${docker.registry.name.prefix}/${project.artifactId}</repository>
                     <tag>${project.version}</tag>
-                    <username>admin</username>
-                    <password>Harbor12345</password>
+                    <!--<username>xxx</username>-->
+                    <!--<password>xxx</password>-->
                     <buildArgs>
                         <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
                     </buildArgs>
