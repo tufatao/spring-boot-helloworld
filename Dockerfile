@@ -1,4 +1,4 @@
-FROM java:8-jre-alpine
+FROM reg.devharbor.com/test/alpine-java8-utc8-chinese:0.1.1
 
 WORKDIR /home
 
